@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>True</UseWindowsForms>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="SplashScreen1.png" />
+    <None Remove="SplashScreen2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="F:\Emploi.Formation\Programmation\Applications_Programmes_GP\Réseaux_de_Communications\Kirébos Networks\Fenêtre et Programmation\Fenêtre_Récurrence.xaml" Link="Fenêtre_Récurrence.xaml" />
+    <Page Include="Page1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <SplashScreen Include="SplashScreen1.png" />
+    <SplashScreen Include="SplashScreen2.png" />
+  </ItemGroup>
+
+</Project>
