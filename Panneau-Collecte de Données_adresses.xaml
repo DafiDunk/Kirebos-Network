@@ -1,0 +1,100 @@
+﻿<Window x:Class="WpfApp1.Panneau-Collecte de Données_adresses"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Panneau-Scroll_Collecte-de-Données" Height="500" Width="724">
+    <Grid HorizontalAlignment="Left" Width="724">
+        <ComboBox HorizontalAlignment="Center" Height="484" VerticalAlignment="Top" Width="724" BorderBrush="{x:Null}" Foreground="{x:Null}" Background="{x:Null}">
+            <ComboBox.ItemContainerStyle>
+                <Style/>
+            </ComboBox.ItemContainerStyle>
+        </ComboBox>
+        <TextBlock x:Name="Adresses_IP" HorizontalAlignment="Left" Height="16" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" Margin="32,9,0,0" FontFamily="Arial" Foreground="#FF2F2A2A" FontSize="11"><Run Text="Adresse"/><Run Language="fr-fr" Text="s"/><Run Text=" IP"/></TextBlock>
+        <WrapPanel HorizontalAlignment="Left" Height="85" Margin="12,25,0,0" VerticalAlignment="Top" Width="290">
+            <WrapPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF969090" Offset="0"/>
+                    <GradientStop Color="#FFC5B3B3" Offset="1"/>
+                </LinearGradientBrush>
+            </WrapPanel.Background>
+        </WrapPanel>
+        <Button x:Name="Button_Ajouter_Adresse_IP" Content="Ajouter" HorizontalAlignment="Left" Height="19" Margin="323,41,0,0" VerticalAlignment="Top" Width="68" FontFamily="Arial" Foreground="#FF2F2A2A"/>
+        <Button x:Name="___Button_Supprimer_Adresses_IP" Content="Suppr." HorizontalAlignment="Left" Height="19" Margin="323,67,0,0" VerticalAlignment="Top" Width="68" FontFamily="Arial" Foreground="#FF2F2A2A"/>
+        <TextBlock x:Name="Adresses_IP_Valides" HorizontalAlignment="Left" Height="16" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" Margin="434,9,0,0" FontFamily="Arial" Foreground="#FF2F2A2A" FontSize="11"><Run Text="Adresses IP "/><Run Language="fr-fr" Text="v"/><Run Text="alides"/></TextBlock>
+        <WrapPanel HorizontalAlignment="Left" Height="85" Margin="414,25,0,0" VerticalAlignment="Top" Width="290">
+            <WrapPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF969090" Offset="0"/>
+                    <GradientStop Color="#FFC5B3B3" Offset="1"/>
+                </LinearGradientBrush>
+            </WrapPanel.Background>
+        </WrapPanel>
+        <TextBlock x:Name="Adresses_MAC" HorizontalAlignment="Left" Height="16" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" Margin="32,123,0,0" FontFamily="Arial" Foreground="#FF2F2A2A" FontSize="11"><Run Language="fr-fr" Text="Adresses MAC"/></TextBlock>
+        <WrapPanel HorizontalAlignment="Left" Height="85" Margin="12,139,0,0" VerticalAlignment="Top" Width="290">
+            <WrapPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF969090" Offset="0"/>
+                    <GradientStop Color="#FFC5B3B3" Offset="1"/>
+                </LinearGradientBrush>
+            </WrapPanel.Background>
+        </WrapPanel>
+        <Button x:Name="Button_Ajouter_Adresse_MAC" Content="Ajouter" HorizontalAlignment="Left" Height="19" Margin="323,155,0,0" VerticalAlignment="Top" Width="68" FontFamily="Arial" Foreground="#FF2F2A2A"/>
+        <Button x:Name="___Button_Supprimer_Adresses_MAC" Content="Suppr." HorizontalAlignment="Left" Height="19" Margin="323,181,0,0" VerticalAlignment="Top" Width="68" FontFamily="Arial" Foreground="#FF2F2A2A"/>
+        <TextBlock x:Name="Adresses_MAC_Valides" HorizontalAlignment="Left" Height="16" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" Margin="434,123,0,0" FontFamily="Arial" Foreground="#FF2F2A2A" FontSize="11"><Run Language="fr-fr" Text="Adresses MAC valides"/></TextBlock>
+        <WrapPanel HorizontalAlignment="Left" Height="85" Margin="414,139,0,0" VerticalAlignment="Top" Width="290">
+            <WrapPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF969090" Offset="0"/>
+                    <GradientStop Color="#FFC5B3B3" Offset="1"/>
+                </LinearGradientBrush>
+            </WrapPanel.Background>
+        </WrapPanel>
+        <TextBlock x:Name="Adresses_Wifi" HorizontalAlignment="Left" Height="16" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" Margin="32,237,0,0" FontFamily="Arial" Foreground="#FF2F2A2A" FontSize="11"><Run Language="fr-fr" Text="Adresses Wifi"/></TextBlock>
+        <WrapPanel HorizontalAlignment="Left" Height="85" Margin="12,253,0,0" VerticalAlignment="Top" Width="290">
+            <WrapPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF969090" Offset="0"/>
+                    <GradientStop Color="#FFC5B3B3" Offset="1"/>
+                </LinearGradientBrush>
+            </WrapPanel.Background>
+        </WrapPanel>
+        <Button x:Name="Button_Ajouter_Réseau_Wifi" Content="Ajouter" HorizontalAlignment="Left" Height="19" Margin="323,269,0,0" VerticalAlignment="Top" Width="68" FontFamily="Arial" Foreground="#FF2F2A2A"/>
+        <Button x:Name="___Button_Supprimer_Adresses_Wifi" Content="Suppr." HorizontalAlignment="Left" Height="19" Margin="323,295,0,0" VerticalAlignment="Top" Width="68" FontFamily="Arial" Foreground="#FF2F2A2A"/>
+        <TextBlock x:Name="Adresses_Wifi_Valides" HorizontalAlignment="Left" Height="16" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" Margin="434,237,0,0" FontFamily="Arial" Foreground="#FF2F2A2A" FontSize="11"><Run Language="fr-fr" Text="Adresses Wifi valides"/></TextBlock>
+        <WrapPanel HorizontalAlignment="Left" Height="85" Margin="414,253,0,0" VerticalAlignment="Top" Width="290">
+            <WrapPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF969090" Offset="0"/>
+                    <GradientStop Color="#FFC5B3B3" Offset="1"/>
+                </LinearGradientBrush>
+            </WrapPanel.Background>
+        </WrapPanel>
+        <TextBlock x:Name="Adresses_5G" HorizontalAlignment="Left" Height="16" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" Margin="32,351,0,0" FontFamily="Arial" Foreground="#FF2F2A2A" FontSize="11"><Run Text="Adresses"/><Run Language="fr-fr" Text=" 5G"/></TextBlock>
+        <WrapPanel HorizontalAlignment="Left" Height="85" Margin="12,367,0,0" VerticalAlignment="Top" Width="290">
+            <WrapPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF969090" Offset="0"/>
+                    <GradientStop Color="#FFC5B3B3" Offset="1"/>
+                </LinearGradientBrush>
+            </WrapPanel.Background>
+        </WrapPanel>
+        <Button x:Name="Button_Ajouter_Réseau_5G" Content="Ajouter" HorizontalAlignment="Left" Height="19" Margin="323,383,0,0" VerticalAlignment="Top" Width="68" FontFamily="Arial" Foreground="#FF2F2A2A"/>
+        <Button x:Name="___Button_Supprimer_Adresses_5G" Content="Suppr." HorizontalAlignment="Left" Height="19" Margin="323,409,0,0" VerticalAlignment="Top" Width="68" FontFamily="Arial" Foreground="#FF2F2A2A"/>
+        <TextBlock x:Name="Adresses_5G_Valides" HorizontalAlignment="Left" Height="16" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" Margin="434,351,0,0" FontFamily="Arial" Foreground="#FF2F2A2A" FontSize="11"><Run Text="Adresses "/><Run Language="fr-fr" Text="5G"/><Run Text=" valides"/></TextBlock>
+        <WrapPanel HorizontalAlignment="Left" Height="85" Margin="414,367,0,0" VerticalAlignment="Top" Width="290">
+            <WrapPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF969090" Offset="0"/>
+                    <GradientStop Color="#FFC5B3B3" Offset="1"/>
+                </LinearGradientBrush>
+            </WrapPanel.Background>
+        </WrapPanel>
+        <TextBlock x:Name="Accès_Réseaux_Smartphone_Mobiles" TextWrapping="Wrap" TextDecorations="Underline" Foreground="#FF4335EA" Margin="483,457,0,0" OpacityMask="#FF0078D7" FontSize="11"><Run Language="fr-fr" Text="Accéder aux réseaux smartphones et mobiles"/></TextBlock>
+
+
+
+    </Grid>
+</Window>
