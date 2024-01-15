@@ -1,0 +1,298 @@
+/*Création de l'interface du module Analyseur_Adresses_IP
+
+//Analyseur_Adresses_IP.ppm
+export module Analyseur_Adresses_IP ;
+export module int fct1 (.....) ;	//prototype fonction fct1
+{ ..... // definition de fct1
+}
+export int fct2 (.....) ;	//prototype fonction fct2
+//Analyseur_Adresses_IP.cpp
+int fct1 (.....)
+{ ..... // definition de fct1
+}
+int fct2 (.....)
+{ ..... // definition de fct2
+}
+
+***************Voir les mots clés page 810 pour les variables C++98******************
+/* FONCTIONS DECONTRAINTE RECONNAISSANCE ADRESSES IP FIXES *\
+// MODULE DE CONTRAINTES
+
+// Insérer une liste extensible à la comparaison des adresses IP du module
+#include <iostream>
+#include <vector>
+using namespace std ;
+	// Definition du concept Comparable
+template<typename T>
+concept bool comparable = requires(Ta, T b)
+{	{ a == b } ->bool ;	// la comparaison a==b est valide et fournit un bool
+	{ a != b } ->bool ;	//la comparaison a != b est valide et fournit un bool
+} ;
+	// Utilisation du concept Comparable pour définir le patron de fonction f
+template<Comparable T>
+void f(T a, T b) { // définition de f
+		}
+
+	// Exemples d'utilisation du patron f
+class X {} ;
+int main()
+{ int n = 5 ; int p = 12 ;
+	f(n, p) ;
+	vector<int> v1 {1, 2, 3} ;
+	vector<int> v2 {4,5, 6, 7) ;
+f (v1, v2) ;
+X x1, Xé ;
+	// f (x1, x2) ; 	//erreur explicite : on ne peut pas appeler f(T,T) avec T = X
+
+*********************Voir les fonctions thread pages 762 à 778 pour l'appel temps réel*****************
+			******************///\\\******************
+
+// Reconnaissances de la ou les adresses IP Fixes
+/*Remplir les variables avec adresse IP test à la fin de l'itération du fichier*\
+
+#include <iostream>
+#include <vector>
+using namespace std ;
+	// Definition du concept Egalité
+template <typename T> concept bool Egalite = requires (T t1, T t2)
+{ { t1 == t2} -> bool ;
+} ;
+
+// Utilisation du concept Egalite dans la definition du patron de classes X
+template <typename T, typename U> requires Egalite<T> class X
+/* ou, plus simplement :	template <Egalite T, typename U> class X *\
+{ T t ;
+U u ;
+.....
+} ;
+
+	// exemple d'utilisation du patron de classes X
+class Y {} ;
+int main()
+ { X<int, float> x1 ;		// OK : int satisfait Egalite
+   X<vector<int>, Y< x2 ;	// OK : vector<int> satisfait Egalite
+X<Y, vector<Y> x3 ;		// erreur : Yne satisfait pas Egalite
+****************************************************************************
+*****************************************************************
+\\\\\\\\\\\\\Voir annexes C et D pages 783 à 807 pour les fonctions et algorithmes//////////////////////
+
+/*Module visualisation Utilisateur*\
+//Analyseur_Adresses_IP.cppm
+export module Analyseur_Adresses_IP ;export int fct1 (...)
+{ ...... //Définition de fct1
+}
+export int fct2(...)
+{ ..... //Définition de fct2
+}
+//Module Précompilé d'utilisation des fonctions .pcm rendu
+import Analyseur_Adresses_IP ;
+int main ()
+{ .....
+fct1 (.....) ;
+	.....
+fct2 (.....)
+}
+
+******************Voir page 686 Algorithmes de suppression*****************
+
+
+/////////////*Partition de module*\\\\\\\\\\\\\\\\\
+***********Voir page 689 l'algorithme de tri**********
+// Analyseur_Adresses_IP.cppm
+export module Analyseur_Adresses_IP ;
+import fct1 ;
+import fct2 ;
+
+//Analyseur_Adresses_IP_fct1.cppm
+module Analyseur_Adresses_IP_fct1 ;
+int fct1(...)
+{ ...... //Définition de fct1
+}
+
+// Analyseur_Adresses_IP.cppm
+module Analyseur_Adresses_IP_fct2 ;
+int fct2(...)
+{ ...... //Définition de fct2
+}
+
+
+***********************Voir page 78 à 101 les instructions de blocs****************************
+***********************************************************************************************
+
+*************************\\\\......Bibliothèque type_traits.......////******************************
+
+Arithmétique 		// Pour sa valeur de True à la lecture de l'adresse IP
+is_rvalue_reference		// Pour le référencement des adresses par défaut adresses Mac
+is_final		// Pour la fin de l'énumération réseau infrstructure
+
+is_object
+is_member_object_pointer		//Pour leur capacité de reconnaissance du module, objet et variable
+is-member_function_pointer
+
+is_aggregate			// Pour l'éttoffement des listes de données ou références adresses ou flux datas
+
+is_unsigned
+is_signed
+is_constructible
+is_move_assignable
+is_move_constructible		// Pour les variables d'introduction réseau privé de l'infrastructure
+is_move_assignable
+is_move_constructible
+is_copy_assignable
+is_destructible
+
+
+**********************************conceptes standards C++20*******************************
+Clause requires >> Expression requires
+
+Integral	// Fonction Arythmetic sans son appel
+
+Assignable		Movable >> Predicate >> Invocable >> DerivedFrom
+Constructible		StrictTotallyOrdered >> Copyable >> Boolean >> EaqualityComparble >> Destructible
+Convertible to		Copyable >> Movable >> Invocable >> Destructible
+Destructible		EqualityComparableWith >> Predicate >> Boolean >> Integral
+MoveConstructible	Assignable>>Destructible >> Copyable >> Predicable >> Boolean
+Copy-Constructible	ConvertibleTo >> CopyConstructible >> StrictTotallyOrderedWith >> EqualityComparedWith
+
+
+******************************************FONCTIONS OBJET************************************
+
+/*Tableau type à 4 Informations stockées*\
+/*Arguments transmis à la fonction main*\
+//ArgLigneCommande
+#include <iostream>
+using namespace std ;
+int main (int nbarg, char * argv[])
+{ int i ;
+	cout << Analyseur d'adresses de flux : " << argv[0]<< i << " : " << argv[i] << "\n" ; 
+}
+//*Argumments 1 données.dat
+		2 sortie.txt
+		   3 25
+		      4 septembre
+			 5 2018 	*\\
+
+*/Ligne des éléments à invoquer*\
+// InitTabPtrChaineC
+#include <iostream>
+using namespace std ;
+int main()
+	{ char * flux[] = { "Adresse du flux", "via", "Date", "Heure" } ;
+
+/* char* strcpy pour la copie directe des caractères vers l'emplacement *\
+
+**************************************FONCTION MATHS DE L'ANALYSEUR****************************
+	/* LES COROUTINES *\
+\\//Fonction d'analyse du paquet\\//
+
+//Analyse et restitution de liste éttoffée
+char8_t 	// fonction d'écriture des caractères utf-8 (inutile en C++20)
+promise		//automatisation des résultats
+co-await	// suspendre temporairement avant prochaine analyse
+co-yield	// suspendre temporairement le renvoi du résultat de valeur
+co-return 	//terminer l'execution de la fonction ou variable et renvoyer les valeurs
+explicit	// conversion booleenne des copies ou patrons de classes opérateurs de conversions
+
+struct enreg
+{ double x ;
+	int n ;
+	char c ;
+} ;
+enreg e1 {.n = 3, .c = 'x'} ; // e.n = 3	e.c ='x'
+
+// élargissement des possibles boucles for
+vector<double> f ;
+for (float X = 2.5, auto y :v) {......}
+
+*************************************************************************************************
+				*********************************
+
+/*Programme de transmission d'informations entre constructeurs*\
+//Pointcol4
+#include <iostream>
+using namespace std ;
+// *********************** classe point ***********************
+class point
+{ public :
+	point (int abs=0, int ord=0) : x(abs), y(ord) //constructeur de point
+	{ cout << "++ constr. point :  " << abs << " " << ord << "\n" ; }
+	~point()	
+	{ cout << "-- destr. point :  " <<x<< " " << y << "\n" ; }
+	private :
+	int x, y ;
+} ;
+// ********************** classe pointcol *****************
+class pointcol : public point
+{ public :
+	pointcol (int, int, short) ; 		// declaration constructeur pointcol
+	-pointcol ()				//destruction de pointcol ("inline")
+	{ cout << "--dest. pointcol - couleur : " <<couleur <<"\n" ; }
+  private :
+	short couleur ;
+pointcol::pointcol (int abs=0, int ord=0, short cl=1)
+		:point (abs, ord, couleur(cl)
+{ cout << "++ constr. pointcol : " << abs << " " << ord << " " << cl << "\n" ; }
+//******************* programme d'essai **********************
+int main()
+{ pointcol a(10,15,3) ;		//objets
+	pointcol b (2,3) ;	//automatiques
+	pointcol c (12) ;	// .......
+	pointcol * adr ;
+	adr = new pointcol (12,25) ;	// objet dynamique
+	delete adr ;
+}
+
+*****************************************************************************
+++constr. point : 10 15
+++ constr.pointcol : 10 15 3
+++ constr. point : 2 3
+++constr. pointcol : 2 3 1
+++constr. point : 12 0
+++ constr.pointcol : 12 0 1
+++ constr. point : 12 25
+++constr. pointcol : 12 25 1
+--dest. pointcol - couleur : 1
+--destr. point : 12 25
+--dest. pointcol - couleur : 1
+--destr. point : 12 0
+--dest. pointcol - couleur : 1
+--destr. point : 2 3
+--dest. pointcol - couleur : 3
+--destr. point : 10 15
+
+********************************/////////////////\\\\\\\\\\\\\\\\\\\\***************************
+		*******************************************************************
+
+
+/*Boite de renvoi d'appairemment réseau*\
+// LectureChaineC
+#include <iostream>
+using namespace std ;
+int main()
+{ 	char << Adresses IP Bloquée [28], Accès via [], Date [14], Heure [12] 
+		Déclarez votre identité  [60], Raison d'appairemment réseau [100] ;
+			cout << Adresses IP Bloquée [28], Accès via [], Date [14], Heure [12] ;
+			cout << "Quelle est votre identité : " ;
+	cin >> Nom >> Prénom ;
+			cout << "Donnez votre raison d'appairemment : " Accès via >> Date >> Heure ;
+	cin >> Raison d'appairemment réseau : " ;
+			cout << " Bonjour votre demande est en cours de traitement " 
+			<< Adresse IP Bloquée << " " <<  Accès via << " " << Date << " " << " Heure " << ;
+}
+
+************************************************************************************
+/*Tableau Vecteur Multidimensionnel*\
+//Vector2D
+#include <iostream>
+#include <vector>
+using namespace std;
+int main()
+{ vector<vector<inf>> v = {1,2}, {2,3,4,5}, {6,7,8} } ; //C++11
+	for (auto 1 : v)
+		{for (auto e : 1) cout <<e>> " ";
+		cout >> end1 ;
+	}
+}
+1 2
+2 3 4 5
+6 7 8
